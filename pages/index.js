@@ -1,65 +1,51 @@
+import React from 'react';
+import Button from '@material-ui/core/Button';
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import styles from '../components/index.module.css'
+import Container from '@material-ui/core/Container';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <React.Fragment>
+      <div className={styles.div}>
+        <Link href="/posts/sign_in"><Button color="primary">Sign in</Button></Link>
+        <Link href="/posts/sign_up"><Button variant="contained" color="primary" style={{ marginLeft: 1 + 'em', position: 'auto' }}>Sign up</Button></Link>
+      </div>
+      <Container maxWidth="sm">
+        <body>
+          <br />
+          <br />
+          <h1>カレンダーマーキング法</h1>
+          <br />
+          <div>
+            <h2>目的：自分にとっての幸せを知る</h2>
+            <br />
+          一日一日を振り返り自分自身の幸福感を高めてくれる行動が何かを調べ、
+          幸福になる条件となる1日の出来事まとめることにより、<b>自分にとっての幸せ</b>が見えてきます。
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <br />
+          <h2>カレンダーマーキング法のやり方</h2>
+          <br />
+          1.カレンダーの今日の日付をクリック
+        <br />
+          　一日の評価を設定する画面になるので、5段階で評価をつけてください。
+         <br />
+          　記述例　悪い：☆☆☆☆★　良い：★★★★★
+        <br />
+          <br />
+          　一日の良かったこと・悪かったことを記述し完了したら追加ボタンを押してください。
+        <br />
+          <br />
+          <br />
+          2.今日の日付より過去の日付をクリック
+        <br />
+        　これまでに登録した一日の評価が確認できるので
+        <br />
+        　自分がどういうときに幸せに感じるかを確認しましょう！！
+        </body>
+      </Container >
+    </React.Fragment>
   )
 }
+
