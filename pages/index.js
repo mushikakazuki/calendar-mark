@@ -9,6 +9,9 @@ export default function Home() {
   return (
     <React.Fragment>
       <div className={styles.div}>
+        <Link href="/calendar">
+          <Button variant="contained" color="secondary">カレンダー</Button>
+        </Link>
         <Link href="/posts/sign_in">
           <Button color="primary">Sign in</Button>
         </Link>
