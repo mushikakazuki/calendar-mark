@@ -5,7 +5,6 @@ export default function calendar() {
     return (
         <React.Fragment>
             <Calendar />
-            aaaaaaa
         </React.Fragment>
     )
 }
